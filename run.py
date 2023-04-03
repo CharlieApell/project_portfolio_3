@@ -1,6 +1,11 @@
 # import random and a list of word for the program to randomly choose from
 import random
+import colorama
+from colorama import Fore
 from words import words_list
+
+
+colorama.init(autoreset=True)
 
 
 # function that returns a random word from the word list in uppercase
@@ -33,7 +38,7 @@ def play(word):
                 tries -= 1
                 guessed_letters.append(guess)
             else:
-                print("Good job, ", guess, "is in the word")
+                print("Good job,", guess, "is in the word")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
@@ -53,7 +58,7 @@ def play(word):
                 guessed = True
                 word_completion = word
         else:
-            print("Not a valid guess.")
+            print(f"{Fore.RED}Not a valid guess.")
         print(display_hangman(tries))
         print(word_completion)
         print("\n")
