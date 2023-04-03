@@ -1,17 +1,25 @@
+# import random and a list of word for the program to randomly choose from
 import random
 from words import words_list
 
+
+# function that returns a random word from the word list in uppercase
 def get_word():
     word = random.choice(words_list)
     return word.upper()
 
+
+user_name = input("What's your name? ")
+
+
+# gameplay will run until the word is right or the user runs out of tries
 def play(word):
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
     tries = 6
-    print("Let's play Hangman!")
+    print(f"Let's play Hangman, {user_name}! Guess the city!")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
@@ -49,13 +57,18 @@ def play(word):
         print(display_hangman(tries))
         print(word_completion)
         print("\n")
+
+
+# Win or lose message
     if guessed:
-        print("Congratulations! You guessed it right! You win!")
+        print(f"Congratulations {user_name}! You guessed it right! You win!\n")
     else:
-        print("Aaaw, sorry, you ran out of tries, the word was " + word + ". Better luck next time!")
+        print(f"Aaaw, sorry {user_name}, you ran out of tries!")
+        print("the word was " + word + ". Better luck next time!\n")
+
 
 def display_hangman(tries):
-    stages = [  # final state: head, torso, both arms, and both legs
+    stages = [  # final: head, torso, both arms, and both legs
                 """
                    --------
                    |      |
@@ -82,7 +95,7 @@ def display_hangman(tries):
                    |      O
                    |     /|\\
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # head, torso, and one arm
@@ -92,7 +105,7 @@ def display_hangman(tries):
                    |      O
                    |      |\\
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # head and torso
@@ -102,7 +115,7 @@ def display_hangman(tries):
                    |      O
                    |      |
                    |      |
-                   |     
+                   |
                    -
                 """,
                 # head
@@ -110,28 +123,29 @@ def display_hangman(tries):
                    --------
                    |      |
                    |      O
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
                    -
                 """,
                 # initial empty state
                 """
                    --------
                    |      |
-                   |      
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
+                   |
                    -
                 """
     ]
     return stages[tries]
 
+
 def main():
     word = get_word()
     play(word)
-    while input("Play Again? (Y/N) ").upper() == "Y":
+    while input("Play Again? (Y/N)").upper() == "Y":
         word = get_word()
         play(word)
 
