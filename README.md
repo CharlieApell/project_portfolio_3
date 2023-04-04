@@ -1,31 +1,97 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# HANGMAN
 
-Welcome CharlieApell,
+Hangman is a Python based game 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+The live website can be found [here](https://pp3-charlie-hangman.herokuapp.com/).
 
-## Reminders
+![Responsive Mockup](images/amiresponsivePython.png)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Features 
 
-## Creating the Heroku app
+### Existing Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- __Start__
 
-1. `heroku/python`
-2. `heroku/nodejs`
+  - Nice header showing what kind of game it is and it asks for the users name.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+![Start](images/start.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- __Game Start__
 
-Connect your GitHub repository and deploy as normal.
+  - Small info about the rules.
+  - Press enter to start the game.
 
-## Constraints
+![Game-Start](images/startgame.png)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- __Guesses__
 
------
-Happy coding!
+  - The user will get 6 guesses to guess the right European City.
+  - Input validation and error checking.
+    - You cannot enter the same word or letter twice.
+    - You must enter letters.
+    - You can guess the city right away.
+
+![Same Letter](images/sameletter.png)
+![Same Word](images/sameword.png)
+![Wrong Word](images/wrongword.png)
+
+- __Win or Lose__
+  - Text shown if the user guesses right or run out of tries.
+
+![Lose](images/lose.png)
+![Win](images/win.png)
+
+
+## Testing 
+
+- Passed the code through a PEP8 linter and confirmed there are no problems.
+- Tested in my local terminal and the Code Institute Heroku Terminal.
+
+![PEP8 Validator](images/pep8Validator.png)
+
+
+## Bugs
+
+### Solved Bugs
+- Indentation problems.
+- Some code was to long, 81 characters, had to slim it down.
+
+### Unfixed Bugs
+- No reports of bugs.
+
+## Deployment
+
+- Go to the Heroku Dashboard.
+- Click New.
+- Select to create a new app.
+- Add Config Var's for Creds and Port
+- Set the buildbacks to Python and NodeJS in that order.
+- Link the Heroku app to the repository.
+- Click on Deploy, you can choose manually or automatically.
+
+
+## Technologies Used
+
+### Languages Used
+
+Python.
+
+### Libraries & Programs Used
+
+- Gitpod - For version control.
+
+- Github - To save and store the files for the website.
+
+- Heroku - To deploy the project.
+
+- [Am I Responsive?](http://ami.responsivedesign.is/) To show the website image on a range of devices.
+
+- [ASCII art] (https://ascii.co.uk/art/hangman) was used for the Hangman header.
+
+
+## Credits 
+
+### Content
+
+- I followed the tutorial from [Kite](https://youtu.be/m4nEnsavl6w).
+- Slack
