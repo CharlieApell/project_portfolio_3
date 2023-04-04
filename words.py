@@ -18,4 +18,5 @@ words_list = [
     'oslo',
     'madrid',
     'berlin',
-    'london']
+    'london',
+    'prague']

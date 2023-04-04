@@ -14,6 +14,17 @@ def get_word():
     return word.upper()
 
 
+
+print(" _   _")
+print("| | | |")
+print("| |_| | __ _ _ __   __ _ _ __ ___   __ _ _ __")
+print("|  _  |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\")
+print("| | | | (_| | | | | (_| | | | | | | (_| | | | |")
+print("|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|")
+print("                    __/ |")
+print("                   |___/")
+print("\n")
+
 user_name = input("What's your name? ")
 
 
@@ -66,9 +77,9 @@ def play(word):
 
 # Win or lose message
     if guessed:
-        print(f"Congratulations {user_name}! You guessed it right! You win!\n")
+        print(f"{Fore.GREEN}Congratulations! You guessed it right! You win!\n")
     else:
-        print(f"Aaaw, sorry {user_name}, you ran out of tries!")
+        print(f"{Fore.RED}Aaaw, sorry, you ran out of tries!\n")
         print("the word was " + word + ". Better luck next time!\n")
 
 
