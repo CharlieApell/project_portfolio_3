@@ -27,7 +27,8 @@ print("\n")
 #    Welcome them to the game and get their username.
 user_name = input("What's your name? \n")
 print("\n")
-print(f"Let's play Hangman, {user_name}! You have upto 6 guesses to guess the European city.")
+print(f"Let's play Hangman, {user_name}!")
+print("You have 6 guesses to guess the European city.")
 input("When you are ready to play, Press the Enter key to start")
 
 
@@ -55,8 +56,8 @@ def play(word):
                 print("Good job,", guess, "is in the word")
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
-                for index in indices:
+                indcs = [i for i, letter in enumerate(word) if letter == guess]
+                for index in indcs:
                     word_as_list[index] = guess
                 word_completion = "".join(word_as_list)
                 if "_" not in word_completion:
