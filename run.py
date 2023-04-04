@@ -1,4 +1,4 @@
-# import random and a list of word for the program to randomly choose from
+# Import the random choice function, words list and colorama function
 import random
 import colorama
 from colorama import Fore
@@ -14,31 +14,34 @@ def get_word():
     return word.upper()
 
 
-
+# Header
 print(" _   _")
 print("| | | |")
 print("| |_| | __ _ _ __   __ _ _ __ ___   __ _ _ __")
 print("|  _  |/ _` | '_ \\ / _` | '_ ` _ \\ / _` | '_ \\")
 print("| | | | (_| | | | | (_| | | | | | | (_| | | | |")
-print("|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|")
+print("|_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|")
 print("                    __/ |")
 print("                   |___/")
 print("\n")
+#    Welcome them to the game and get their username.
+user_name = input("What's your name? \n")
+print("\n")
+print(f"Let's play Hangman, {user_name}! You have upto 6 guesses to guess the European city.")
+input("When you are ready to play, Press the Enter key to start")
 
-user_name = input("What's your name? ")
 
-
-# gameplay will run until the word is right or the user runs out of tries
+# game will run until the word is right or the user runs out of tries
 def play(word):
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
     tries = 6
-    print(f"Let's play Hangman, {user_name}! Guess the city!")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
+    # right and wrong tries
     while not guessed and tries > 0:
         guess = input("Please guess a letter or a word: ").upper()
         if len(guess) == 1 and guess.isalpha():
