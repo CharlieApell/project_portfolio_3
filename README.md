@@ -1,10 +1,19 @@
 # HANGMAN
 
-Hangman is a Python based game 
+Hangman is a Python based game played in the terminal.
 
 The live website can be found [here](https://pp3-charlie-hangman.herokuapp.com/).
 
 ![Responsive Mockup](images/amiresponsivePython.png)
+
+
+## How to play
+1. The computer chooses a random word and displays a series of dashes on the screen to represent each letter of the word.
+2. The player then guesses a letter that they think might be in the word.
+3. If the guessed letter is in the word, the computer replaces the appropriate dash(es) with that letter. If the letter is not in the word, the computer keeps track of the wrong guesses and displays a part of the hangman figure.
+4. The player continues to guess letters until they either guess the word correctly or they have made six incorrect guesses, causing the hangman figure to be completed and the game to be over.
+5. If the player guesses the word correctly before the hangman is completed, they win the game. If the hangman figure is completed before the player guesses the word, they lose the game.
+
 
 ## Features 
 
@@ -25,6 +34,7 @@ The live website can be found [here](https://pp3-charlie-hangman.herokuapp.com/)
 
 - __Guesses__
 
+  - The computer randomly selects a city from the words.py list.
   - The user will get 6 guesses to guess the right European City.
   - Input validation and error checking.
     - You cannot enter the same word or letter twice.
