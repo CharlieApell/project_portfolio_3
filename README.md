@@ -63,7 +63,7 @@ The live website can be found [here](https://pp3-charlie-hangman.herokuapp.com/)
 ## Bugs
 
 ### Solved Bugs
-- Indentation problems.
+- Indentation and white-spacing problems.
 - Some code was to long, 81 characters, had to slim it down.
 
 ### Unfixed Bugs
@@ -98,10 +98,13 @@ Python.
 
 - [ASCII art] (https://ascii.co.uk/art/hangman) was used for the Hangman header.
 
+### 3rd party libraries
+
+- Coloroma
+I wanted to give the user visual feedback and a more fun experience with changing the color of certain text.
 
 ## Credits 
 
-### Content
-
 - I followed the tutorial from [Kite](https://youtu.be/m4nEnsavl6w).
-- Slack
+- Slack for troubleshooting code.
+- Code Institute for the deployment terminal.

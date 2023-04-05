@@ -24,7 +24,7 @@ print("|_| |_|\\__,_|_| |_|\\__, |_| |_| |_|\\__,_|_| |_|")
 print("                    __/ |")
 print("                   |___/")
 print("\n")
-#    Welcome them to the game and get their username.
+# Welcome them to the game and get their username.
 user_name = input("What's your name? \n")
 print("\n")
 print(f"Let's play Hangman, {user_name}!")
