@@ -1,4 +1,4 @@
-# Import the random choice function, words list and colorama function
+# Import the random choice function, word list and colorama function
 import random
 import colorama
 from colorama import Fore
@@ -32,7 +32,7 @@ print("You have 6 guesses to guess the European city.")
 input("When you are ready to play, Press the Enter key to start")
 
 
-# game will run until the word is right or the user runs out of tries
+# game function will run until the word is right or the user runs out of tries
 def play(word):
     word_completion = "_" * len(word)
     guessed = False
